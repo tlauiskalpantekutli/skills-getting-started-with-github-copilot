@@ -76,12 +76,7 @@ section h3 {
 
 /* Wyróżnienie listy uczestników */
 .activity-card ul {
-  background-color: #f9f9f9; /* tło jak karta aktywności */
-  border: 1px solid #f5f5f5; /* obramowanie jak tło strony */
-  border-radius: 4px;
-  padding: 10px 18px;
-  margin: 8px 0 0 0;
-  list-style-type: disc;
+  display: none;
 }
 
 .activity-card ul li {
