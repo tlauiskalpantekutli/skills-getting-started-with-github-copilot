@@ -27,6 +27,31 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
         `;
 
+        // Dodaj sekcję uczestników jako wypunktowaną listę
+        const participantsSection = document.createElement("div");
+        participantsSection.className = "participants-section";
+        const participantsHeader = document.createElement("p");
+        participantsHeader.innerHTML = "<strong>Uczestnicy:</strong>";
+        participantsSection.appendChild(participantsHeader);
+
+        const participantsList = document.createElement("ul");
+        // Poprawka: sprawdzaj czy details.participants istnieje i jest tablicą
+        if (Array.isArray(details.participants) && details.participants.length > 0) {
+          details.participants.forEach((participant) => {
+            const li = document.createElement("li");
+            li.className = "participant";
+            li.textContent = participant;
+            participantsList.appendChild(li);
+          });
+        } else {
+          const li = document.createElement("li");
+          li.className = "participant";
+          li.textContent = "Brak zapisanych uczestników";
+          participantsList.appendChild(li);
+        }
+        participantsSection.appendChild(participantsList);
+        activityCard.appendChild(participantsSection);
+
         activitiesList.appendChild(activityCard);
 
         // Add option to select dropdown
