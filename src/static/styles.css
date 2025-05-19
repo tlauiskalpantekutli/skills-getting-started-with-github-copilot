@@ -116,6 +116,37 @@ section h3 {
   letter-spacing: 0.2px;
 }
 
+/* Alternatywna sekcja uczestników */
+.participants-section-alt {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #e3f2fd;
+  border: 1px dashed #1976d2;
+  border-radius: 6px;
+}
+
+.participants-section-alt > p {
+  margin-bottom: 5px;
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.participants-section-alt ol {
+  margin: 0;
+  padding-left: 22px;
+  background: none;
+  border: none;
+}
+
+.participant-alt {
+  color: #1976d2;
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-style: normal;
+  letter-spacing: 0.1px;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
